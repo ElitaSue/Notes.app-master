@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <% include ./partials/nav %>
+    <div class="container">
+
+      <h3 class="center">Notes</h3>
+      <hr />
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <button id="addNewNote" class="btn">Add Note</button>
+          <div id="newNote" class="hide">
+            <div class="editNote">
+              <form action="/notes" method="POST">
+                <input type="text" name="title" id="title" placeholder="Title" />
+                <textarea name="description" id="description" placeholder="Description"></textarea>
+                  <button class="btn" type="button" id="cancelHide">Cancel</button>
+                  <button class="btn">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+      
+        <ul>
+          <% notes.forEach( function(note) { %>
+            <li class="note card-panel hoverable">
+            <div class="col s12 m3 l4">
+              <a class="noteCard" href="<%= '/notes/' + note.id %>" >
+                <div class="noteTitle">
+                  <%= note.title %>
+                </div>
+                <div class="noteDescription">
+                  <%= note.description %>
+                </div>
+              </a>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+        
+      </div>
+    </div>
+    <script src="../javascripts/main.js" charset="utf-8"></script>
+  </body>
+</html>

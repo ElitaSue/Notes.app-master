@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+nav {
+  background-color: #7d7d7d !important;
+}
+
+.brand-logo, .noteTitle, #title {
+  font-family: Pacifico, sans-serif;
+  }
+
+
+.note.card-panel {
+  padding: 0;
+  background:#e0f7fa;
+}
+.noteCard {
+  padding: 1em 1em;
+  width: 360px;
+  height: 100%;
+  display: block;
+}
+
+.note a {
+  color: #006064;
+}
+.noteTitle {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.noteDescription {
+  font-size: .9em;
+}
+
+#addNewNote{
+  margin-top: 40px;
+  float: right;
+  clear: clear-both;
+}
+
+.note{
+  display: inline-block;
+}
+
+#newNote{
+  padding: 30px;
+  border: .5px solid black;
+}
+
